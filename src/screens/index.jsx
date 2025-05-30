@@ -4,4 +4,8 @@ import Bookmark from "./Bookmark";
 import Profile from "./Profile";
 import Setting from "./Setting";
 import Favorite from "./Favorite";
-export {Home, Discover, Bookmark, Profile, Setting, Favorite}
+import BlogDetail from "./BlogDetail";
+import AddBlogForm from "./AddBlogForm";
+import AddDataForm from "./AddDataForm";
+
+export {Home, Discover, Bookmark, Profile, Setting, Favorite, BlogDetail, AddBlogForm, AddDataForm}

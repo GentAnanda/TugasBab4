@@ -3,9 +3,11 @@ import React, {useState} from 'react';
 import {Receipt21} from 'iconsax-react-native';
 import FastImage from 'react-native-fast-image';
 import { fontType, colors } from '../theme';
+import {useNavigation} from '@react-navigation/native';
+
 const ItemHorizontal = ({item, variant, onPress}) => {
   return (
-    <View style={itemHorizontal.cardItem}>
+    <TouchableOpacity style={itemHorizontal.cardItem} onPress={() => navigation.navigate('BlogDetail', {blogId: item.id})}>
       <FastImage
         style={itemHorizontal.cardImage}
         source={{
@@ -28,7 +30,7 @@ const ItemHorizontal = ({item, variant, onPress}) => {
           </View>
         </View>
       </FastImage>
-    </View>
+    </TouchableOpacity>
   );
 };
 const ListHorizontal = ({data}) => {
@@ -101,3 +103,5 @@ const itemHorizontal = StyleSheet.create({
     borderRadius: 5,
   },
 });
+
+const navigation = useNavigation();

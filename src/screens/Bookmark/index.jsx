@@ -1,15 +1,18 @@
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView, Button} from 'react-native';
 import React from 'react';
 import {Add} from 'iconsax-react-native';
 import {BlogList} from '../../data';
 import { ItemBookmark } from '../../components';
 import { fontType, colors } from '../../theme';
+import { useNavigation } from '@react-navigation/native';
+
 const Bookmark = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Your Bookmarks</Text>
-        <Add color={colors.black()} variant="Linear" size={24} />
+        <Button title="Tambah" color="black" onPress={() => navigation.navigate('AddDataForm')} />
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{paddingHorizontal:24, gap:10, paddingVertical:10}}>

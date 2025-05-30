@@ -7,12 +7,13 @@
 
 import React, { useState } from 'react';
 import {ScrollView, StyleSheet,  Text, View, Image, ImageBackground, 
-  TextInput, Pressable, TouchableOpacity, FlatList} from 'react-native';
+  TextInput, Pressable, TouchableOpacity, FlatList, Button} from 'react-native';
 import {Element3, Receipt21, Clock, Message, SearchNormal, 
   Notification} from 'iconsax-react-native';
 import {fontType, colors} from '../../theme';
 import {ListHorizontal, ItemSmall} from '../../components';
 import {CategoryList, BlogList} from '../../data';
+
   
 
 type SectionProps = PropsWithChildren<{
@@ -46,6 +47,8 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 export default function Home() {
+  
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -66,6 +69,7 @@ export default function Home() {
       </View>
       <ListBlog />
     </View>
+    
   );
 }
 
